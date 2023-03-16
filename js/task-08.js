@@ -20,13 +20,6 @@ function onFormSubmit(event) {
     
     formElements.email.value === empty || formElements.password.value === empty
         ? alert("Необходимо заполнить все поля!")
-        : console.log(userData);
-      
-    if (
-      formElements.email.value !== empty &&
-      formElements.password.value !== empty
-    ) {
-        event.currentTarget.reset();
-      }
-      
+    : (console.log(userData),
+      event.currentTarget.reset());
 };

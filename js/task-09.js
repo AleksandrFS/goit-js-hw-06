@@ -5,12 +5,13 @@ function getRandomHexColor() {
 }
 
 const bodyRef = document.querySelector('body');
+const BtnChangeColorRef = document.querySelector('.change-color');
 const backgroundColorRef = document.querySelector('.color');
 
-const BtnChangeColorClick = bodyRef.addEventListener("click", onBtnChangeColorClick);
-
-function onBtnChangeColorClick(event) {
-  bodyRef.style.backgroundColor = getRandomHexColor();
-  backgroundColorRef.textContent = getRandomHexColor();
-
+function onBtnChangeColorClick() {
+  const randomColor = getRandomHexColor();
+  bodyRef.style.backgroundColor = randomColor;
+  backgroundColorRef.textContent = randomColor;
+  
 };
+BtnChangeColorRef.addEventListener("click", onBtnChangeColorClick);
